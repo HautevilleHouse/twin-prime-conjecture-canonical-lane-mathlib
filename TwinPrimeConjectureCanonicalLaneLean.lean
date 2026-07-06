@@ -1,0 +1,7 @@
+-- This module is the root of the TwinPrimeConjectureCanonicalLaneLean Lean proof package.
+import TwinPrimeConjectureCanonicalLaneLean.Basic
+import TwinPrimeConjectureCanonicalLaneLean.SourcePackage
+import TwinPrimeConjectureCanonicalLaneLean.SourceDependencies
+import TwinPrimeConjectureCanonicalLaneLean.Formalization
+import TwinPrimeConjectureCanonicalLaneLean.ReviewerBridge
+import TwinPrimeConjectureCanonicalLaneLean.TheoremStatement
