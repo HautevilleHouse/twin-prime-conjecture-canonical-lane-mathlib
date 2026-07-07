@@ -5,7 +5,7 @@ import CanonicalLaneMathlibCore
 # Mathlib Statement Layer
 
 This module imports the shared Mathlib-backed Canonical Lane core and the
-Twin Prime endgame pilot. The pilot closes over its admitted class and carries the
+Twin Prime closure pilot. The pilot closes over its admitted class and carries the
 unrestricted classical boundary separately.
 -/
 
@@ -32,7 +32,7 @@ def mathlibProofObligation : MathlibProofObligation := {
   theoremSpecificBridgeNative := true,
   theoremSpecificAdmittedClosureNative := true,
   unrestrictedClassicalClosureNative := false,
-  carriedGap := "theorem-specific Mathlib endgame pilot closes over the admitted class; unrestricted classical closure remains carried"
+  carriedGap := "theorem-specific Mathlib closure pilot closes over the admitted class; unrestricted classical closure remains carried"
 }
 
 def commonCoreProjectionLawAvailable : Prop :=
@@ -82,13 +82,13 @@ theorem mathlib_common_core_idempotence_checked :
   intro X instAdd instSub L
   exact AdditiveLane.projection_idempotent_on_delta L
 
-def theoremSpecificEndgamePilotClosed : Prop :=
+def theoremSpecificClosurePilotClosed : Prop :=
   forall A : AdmissibleClass, ConstrainedTwinPrimeClosure A
 
-theorem theorem_specific_endgame_pilot_checked :
-    theoremSpecificEndgamePilotClosed := by
+theorem theorem_specific_closure_pilot_checked :
+    theoremSpecificClosurePilotClosed := by
   intro A
-  exact constrained_twin_prime_endgame A
+  exact constrained_twin_prime_closure A
 
 end TwinPrimeConjectureCanonicalLaneLean
 end HautevilleHouse

@@ -5,12 +5,12 @@ namespace TwinPrimeConjectureCanonicalLaneLean
 
 open HautevilleHouse.CanonicalLaneMathlibCore
 
-def twinPrimeProjection : Projection TwinPrimeEndgameState := {
+def twinPrimeProjection : Projection TwinPrimeClosureState := {
   toFun := fun x => x,
   idempotent := by intro x; rfl
 }
 
-theorem twin_prime_projection_idempotent (x : TwinPrimeEndgameState) :
+theorem twin_prime_projection_idempotent (x : TwinPrimeClosureState) :
     twinPrimeProjection.toFun (twinPrimeProjection.toFun x) = twinPrimeProjection.toFun x := by
   exact twinPrimeProjection.idempotent x
 

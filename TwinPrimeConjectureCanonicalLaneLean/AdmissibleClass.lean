@@ -10,7 +10,7 @@ structure AdmissibleClass where
   gateWitness : endpointSatisfied ∨ remainderRecorded
 
 def admittedClosure (A : AdmissibleClass) : Prop :=
-  TwinPrimeWitnessClosed A.object ∧ (A.endpointSatisfied ∨ A.remainderRecorded)
+  TwinPrimePatternSubstrateClosed A.object ∧ (A.endpointSatisfied ∨ A.remainderRecorded)
 
 end TwinPrimeConjectureCanonicalLaneLean
 end HautevilleHouse
